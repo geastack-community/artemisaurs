@@ -1,0 +1,46 @@
+{
+  "name": "@geastack-community/artemisaurs",
+  "version": "0.0.1",
+  "description": "A twinkling starry sky theme for anyone who wants to create GeaStack-related documentation using Docusaurus.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"const fs = require('fs'); fs.mkdirSync('lib/theme/css', { recursive: true }); fs.copyFileSync('src/theme/css/custom.css', 'lib/theme/css/custom.css');\"",
+    "watch": "tsc --watch",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "docusaurus",
+    "docusaurus-plugin",
+    "docusaurus-theme",
+    "react",
+    "canvas"
+  ],
+  "author": "GeaStack Community",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^3.0.0",
+    "@docusaurus/theme-classic": "^3.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "^3.0.0",
+    "@docusaurus/module-type-aliases": "^3.0.0",
+    "@docusaurus/theme-classic": "^3.0.0",
+    "@types/node": "^26.6.4",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@docusaurus/types": "^3.10.2"
+  }
+}
